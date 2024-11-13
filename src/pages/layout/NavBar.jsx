@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import CmnButton from '../../components/CmnButton'
 
 const NavBar = () => {
   return (
@@ -28,9 +29,10 @@ const NavBar = () => {
           </ul>
         </div>
         <div>
-          <button className='capitalize font-workSans font-medium bg-AscColor rounded-full py-3 px-6 '>
+          {/* <button className='capitalize font-workSans font-medium bg-AscColor rounded-full '>
             <Link className='text-mainColor' to="/appoinment">appoinment</Link>
-          </button>
+          </button> */}
+          <CmnButton className="py-3 px-6 " to={"/appoinment"}>appoinment</CmnButton>
         </div>
       </div>
     </section>

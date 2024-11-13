@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CmnButton from "../../../components/CmnButton";
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
         <div>
           <div className="container mx-auto pt-[20rem]">
             <div>
-              <div>
+              <div className="pb-3">
                 <h3 className="font-bold text-md uppercase tracking-widest text-secColor ">
                   caring for life
                 </h3>
@@ -17,12 +18,15 @@ const Home = () => {
                   in Medical Excellence
                 </h1>
               </div>
-              <button className="capitalize font-workSans font-medium bg-AscColor rounded-full my-8 py-3 px-6 ">
-                <Link to="/service">our service</Link>
-              </button>
+
+              <div>
+                <CmnButton to="/service">
+                  our service
+                </CmnButton>
+              </div>
             </div>
             <div>
-              <div class="absolute bottom-[-3rem]">
+              <div className="absolute bottom-[-3rem]">
                 <div className="flex items-center gap-5 ">
                   <div className="bg-mainColor w-[28rem] h-[6.25rem] flex justify-evenly text-white items-center rounded-md font-workSans ">
                     <h3>Book an appoinment</h3>
@@ -82,19 +86,25 @@ const Home = () => {
       </section>
       {/* image boundry */}
       <section className="container mx-auto">
-      <div>
-        <img
-         className="w-full mb-6 "
-         src="./images/W_ImgBoundry.svg" alt="" />
-      </div>
+        <div>
+          <img
+            className="w-full mb-6 "
+            src="./images/W_ImgBoundry.svg"
+            alt=""
+          />
+        </div>
       </section>
 
       {/* ourService */}
       <section>
         <div className="flex justify-center">
           <div className="text-center py-5">
-            <h3 className="font-workSans text-xl font-bold uppercase text-secColor ">Care you can believe in</h3>
-            <h2 className="font-yesevaOne text-3xl text-mainColor ">Our Services</h2>
+            <h3 className="font-workSans text-xl font-bold uppercase text-secColor ">
+              Care you can believe in
+            </h3>
+            <h2 className="font-yesevaOne text-3xl text-mainColor ">
+              Our Services
+            </h2>
           </div>
         </div>
       </section>
