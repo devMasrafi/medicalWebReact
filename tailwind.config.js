@@ -12,7 +12,6 @@ export default {
     extend: {
       backgroundImage: {
         'heroImg': "url('./images/heroImg.svg')",
-        'footer-texture': "url('/img/footer-texture.png')",
       },
       colors: {
         'mainColor': '#1F2B6C',
