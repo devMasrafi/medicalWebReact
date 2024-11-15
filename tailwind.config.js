@@ -12,6 +12,8 @@ export default {
     extend: {
       backgroundImage: {
         'heroImg': "url('./images/heroImg.svg')",
+        'aboutHeroImg': "url('./images/AboutHeroImg.jpg')",
+        'aboutMessageBg': "url('./images/AboutUserMessage.png')",
       },
       colors: {
         'mainColor': '#1F2B6C',
