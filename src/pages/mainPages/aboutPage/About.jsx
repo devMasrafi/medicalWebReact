@@ -132,7 +132,6 @@ const About = () => {
         </div>
       </section>
 
-
       <section className="container mx-auto py-10">
         <div>
           <div className="text-center my-20 ">

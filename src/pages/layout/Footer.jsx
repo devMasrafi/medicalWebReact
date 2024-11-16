@@ -65,7 +65,7 @@ const Footer = () => {
 
           {/* copywright */}
           <div className="mt-4 md:mt-0 py-6">
-            <p>&copy; 2021 Hospital's name. All Rights Reserved by PNTEC-LTD</p>
+            <p> &copy; 2021 Hospital's name. All Rights Reserved by PNTEC-LTD</p>
             <div className="flex space-x-4 mt-2">
               <a href="#" className="text-white hover:text-gray-300">
                 <i className="fab fa-facebook-f"></i>
