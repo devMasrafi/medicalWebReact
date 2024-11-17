@@ -4,18 +4,20 @@ const About = () => {
   return (
     <main className="font-workSans">
       {/* hero section */}
-      <section className="bg-aboutHeroImg bg-no-repeat bg-cover h-[350px] ">
-        <div className="container mx-auto pt-[12rem] ">
-          <div className="font-workSans shadow-md ">
-            <a href="/" className="hover:text-AscColor transition-colors">
-              Home
-            </a>
-            <span> / </span>
-            <span>About Us</span>
+      <section className="relative bg-aboutHeroImg bg-no-repeat bg-cover h-[350px] ">
+        <div className="absolute inset-0 bg-white/50">
+          <div className="container mx-auto pt-[12rem] ">
+            <div className="font-workSans shadow-md ">
+              <a href="/" className="hover:text-AscColor transition-colors">
+                Home
+              </a>
+              <span> / </span>
+              <span>About Us</span>
+            </div>
+            <h2 className="font-yesevaOne capitalize text-6xl text-mainColor ">
+              About us
+            </h2>
           </div>
-          <h2 className="font-yesevaOne capitalize text-6xl text-mainColor ">
-            About us
-          </h2>
         </div>
       </section>
       {/* About welcome section */}
@@ -73,14 +75,20 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-black/70">
           <div className="text-center flex flex-col items-center justify-center">
             <div className="w-[554px] flex flex-col items-center mt-[5rem] ">
-              <img className="w-[4rem]" src="./images/quotionVector.svg" alt="" />
+              <img
+                className="w-[4rem]"
+                src="./images/quotionVector.svg"
+                alt=""
+              />
               <p className="border-b-2 border-b-gray-400 pb-8 ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                 placerat scelerisque tortor ornare ornare. Quisque placerat
                 scelerisque felis vitae tortor augue. Velit nascetur Consequat
                 faucibus porttitor enim et.
               </p>
-              <h3 className="capitalize text-xl font-semibold pt-4">Jhon doe</h3>
+              <h3 className="capitalize text-xl font-semibold pt-4">
+                Jhon doe
+              </h3>
             </div>
           </div>
         </div>
@@ -135,36 +143,40 @@ const About = () => {
       <section className="container mx-auto py-10">
         <div>
           <div className="text-center my-20 ">
-            <h3 className="text-lg uppercase font-semibold text-secColor">get in touch</h3>
+            <h3 className="text-lg uppercase font-semibold text-secColor">
+              get in touch
+            </h3>
             <h2 className="font-yesevaOne text-3xl pt-2">contact</h2>
           </div>
           <div className="flex justify-evenly items-center">
             <div className=" w-[230px] h-[230px] bg-AscColor flex flex-col justify-center items-center rounded-md ">
               <div>
-              <h3 className="text-lg uppercase font-medium ">emergency</h3>
-              <p>(237) 681-812-255</p>
-              <p>(237) 666-331-894</p>
+                <h3 className="text-lg uppercase font-medium ">emergency</h3>
+                <p>(237) 681-812-255</p>
+                <p>(237) 666-331-894</p>
               </div>
             </div>
             <div className=" w-[230px] h-[230px] bg-AscColor flex flex-col justify-center items-center rounded-md ">
               <div>
-              <h3 className="text-lg uppercase font-medium ">Location</h3>
-              <p>0123 Some place</p>
-              <p>9876 Some country</p>
+                <h3 className="text-lg uppercase font-medium ">Location</h3>
+                <p>0123 Some place</p>
+                <p>9876 Some country</p>
               </div>
             </div>
             <div className=" w-[230px] h-[230px] bg-AscColor flex flex-col justify-center items-center rounded-md ">
               <div>
-              <h3 className="text-lg uppercase font-medium ">Email</h3>
-              <p>fildineeesoe@gmil.com</p>
-              <p>myebstudios@gmail.com</p>
+                <h3 className="text-lg uppercase font-medium ">Email</h3>
+                <p>fildineeesoe@gmil.com</p>
+                <p>myebstudios@gmail.com</p>
               </div>
             </div>
             <div className=" w-[230px] h-[230px] bg-AscColor flex flex-col justify-center items-center rounded-md ">
               <div>
-              <h3 className="text-lg uppercase font-medium ">Working Hours</h3>
-              <p>Mon-Sat 09:00-20:00</p>
-              <p>Sunday Emergency only</p>
+                <h3 className="text-lg uppercase font-medium ">
+                  Working Hours
+                </h3>
+                <p>Mon-Sat 09:00-20:00</p>
+                <p>Sunday Emergency only</p>
               </div>
             </div>
           </div>

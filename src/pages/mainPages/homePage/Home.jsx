@@ -6,9 +6,9 @@ import HeartIcon from "../../../components/HeartIcon";
 const Home = () => {
   return (
     <>
-      <section className="bg-heroImg h-screen bg-no-repeat bg-contain font-workSans">
+      <section className="relative bg-heroImg h-[550px] bg-no-repeat bg-cover font-workSans">
         <div>
-          <div className="container mx-auto pt-[20rem]">
+          <div className="container mx-auto pt-[12rem]">
             <div>
               <div className="pb-3">
                 <h3 className="font-bold text-md uppercase tracking-widest text-secColor ">
@@ -59,9 +59,9 @@ const Home = () => {
       </section>
       {/* welcome to meddical */}
       <section className="container mx-auto font-workSans">
-        <div className="flex justify-center py-12">
+        <div className="flex justify-center py-20">
           <div className="text-center w-[40rem] ">
-            <h3 className="font-bold text-lg text-secColor tracking-widest ">
+            <h3 className="font-bold text-lg text-secColor tracking-widest mt-14 ">
               Welcome to Meddical
             </h3>
             <h2 className="font-yesevaOne text-3xl text-mainColor py-4  ">
