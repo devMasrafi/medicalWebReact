@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { GiHamburgerMenu } from "react-icons/gi";
+
 const NavBar = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [toogleNavOpen, setToogleNavOpen] = useState(false);
 
   const onClickHandlerOpen = () => {
     setModalOpen(true);
+  };
+  const onToogleNavClick = () => {
+    setToogleNavOpen(!toogleNavOpen);
   };
 
   const onClickHandelerClose = () => {
@@ -18,9 +24,9 @@ const NavBar = () => {
   };
 
   return (
-    <section className="bg-mainColor py-2">
-      <div className="container mx-auto flex justify-between text-white">
-        <div>
+    <section className="bg-mainColor py-2 sm:px-2 ">
+      <div className="container mx-auto flex justify-between text-white  ">
+        <div className="2xl:block xl:block md:block lg:block sm:hidden">
           <ul className="flex items-center capitalize gap-5 font-workSans text-lg font-semibold py-3">
             <li>
               <Link to="/">home</Link>
@@ -43,15 +49,18 @@ const NavBar = () => {
           </ul>
         </div>
 
+        {/* button for appoinment */}
         <div>
           <button
             onClick={onClickHandlerOpen}
-            className="capitalize font-workSans font-medium bg-secColor rounded-full py-3 px-6 "
+            className={`capitalize font-workSans font-medium bg-secColor rounded-full py-3 px-6 sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base ${
+              !toogleNavOpen ? "block" : "hidden"
+            }`}
           >
             Appointment
           </button>
           {modalOpen && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-gray-900 bg-opacity-75 transition duration-700">
+            <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-gray-900 bg-opacity-75 sm:">
               <div className="w-[480px] ">
                 <div className="bg-mainColor rounded-lg shadow-md p-6 ">
                   <div className="flex justify-between">
@@ -149,6 +158,42 @@ const NavBar = () => {
               </div>
             </div>
           )}
+        </div>
+        <div className="sm:block lg:hidden md:hidden xl:hidden 2xl:hidden ">
+          <div className="">
+            <button className="" onClick={onToogleNavClick}>
+              <GiHamburgerMenu className="text-3xl" />
+            </button>
+          </div>
+          {/* mobile navigation */}
+          <div>
+            {toogleNavOpen && (
+              <section className="sm:w-screen sm:h-screen ">
+                <div>
+                  <ul className="capitalize gap-5 font-workSans text-lg font-semibold py-3">
+                    <li>
+                      <Link to="/">home</Link>
+                    </li>
+                    <li>
+                      <Link to="/about">about us</Link>
+                    </li>
+                    <li>
+                      <Link to="/service">service</Link>
+                    </li>
+                    {/* <li>
+                      <Link to="/doctors">doctor</Link>
+                    </li>
+                    <li>
+                      <Link to="/news">news</Link>
+                    </li> */}
+                    <li>
+                      <Link to="/contact">contact</Link>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            )}
+          </div>
         </div>
       </div>
     </section>
