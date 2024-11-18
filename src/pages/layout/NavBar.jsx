@@ -60,7 +60,7 @@ const NavBar = () => {
             Appointment
           </button>
           {modalOpen && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-gray-900 bg-opacity-75 sm:">
+            <div className="fixed inset-0 z-50 lg:flex xl:flex md:flex items-center justify-center overflow-y-auto bg-gray-900 bg-opacity-75 sm: ">
               <div className="w-[480px] ">
                 <div className="bg-mainColor rounded-lg shadow-md p-6 ">
                   <div className="flex justify-between">
@@ -159,6 +159,7 @@ const NavBar = () => {
             </div>
           )}
         </div>
+        {/* mobile nav */}
         <div className="sm:block lg:hidden md:hidden xl:hidden 2xl:hidden ">
           <div className="">
             <button className="" onClick={onToogleNavClick}>
@@ -172,13 +173,19 @@ const NavBar = () => {
                 <div>
                   <ul className="capitalize gap-5 font-workSans text-lg font-semibold py-3">
                     <li>
-                      <Link to="/">home</Link>
+                      <Link onClick={onToogleNavClick} to="/">
+                        home
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/about">about us</Link>
+                      <Link onClick={onToogleNavClick} to="/about">
+                        about us
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/service">service</Link>
+                      <Link onClick={onToogleNavClick} to="/service">
+                        service
+                      </Link>
                     </li>
                     {/* <li>
                       <Link to="/doctors">doctor</Link>
@@ -187,7 +194,9 @@ const NavBar = () => {
                       <Link to="/news">news</Link>
                     </li> */}
                     <li>
-                      <Link to="/contact">contact</Link>
+                      <Link onClick={onToogleNavClick} to="/contact">
+                        contact
+                      </Link>
                     </li>
                   </ul>
                 </div>

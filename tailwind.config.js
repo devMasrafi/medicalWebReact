@@ -4,9 +4,9 @@ export default {
   theme: {
     screens:{
       sm: "320px",
-      md: "640px",
-      lg: "768px",
-      xl: "1140px",
+      // md: "640px",
+      // lg: "768px",
+      // xl: "1140px",
       "2xl": "1280px",
     },
     fontFamily: {
@@ -21,6 +21,7 @@ export default {
         ourServiceBg: "url('./images/ourServiceImg/ourService.png')",
         ourServiceBgOverlay:
           "url('./images/ourServiceImg/ourServiceOverlay.svg')",
+          mobileHeroImg:"url(./mobileImages/homeImages/mobileHero.jpg)",
       },
       colors: {
         mainColor: "#1F2B6C",
