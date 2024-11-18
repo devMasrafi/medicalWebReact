@@ -24,9 +24,9 @@ const NavBar = () => {
   };
 
   return (
-    <section className="bg-mainColor py-2 sm:px-2 ">
+    <section className=" bg-mainColor py-2 sm:px-2 ">
       <div className="container mx-auto flex justify-between text-white  ">
-        <div className="2xl:block xl:block md:block lg:block sm:hidden">
+        <div className="2xl:block sm:hidden">
           <ul className="flex items-center capitalize gap-5 font-workSans text-lg font-semibold py-3">
             <li>
               <Link to="/">home</Link>
@@ -53,16 +53,16 @@ const NavBar = () => {
         <div>
           <button
             onClick={onClickHandlerOpen}
-            className={`capitalize font-workSans font-medium bg-secColor rounded-full py-3 px-6 sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base ${
+            className={`capitalize font-workSans font-medium bg-secColor rounded-full py-3 px-6 sm:text-sm 2xl:text-base ${
               !toogleNavOpen ? "block" : "hidden"
             }`}
           >
             Appointment
           </button>
           {modalOpen && (
-            <div className="fixed inset-0 z-50 lg:flex xl:flex md:flex items-center justify-center overflow-y-auto bg-gray-900 bg-opacity-75 sm: ">
-              <div className="w-[480px] ">
-                <div className="bg-mainColor rounded-lg shadow-md p-6 ">
+            <div className="fixed inset-0 z-50 top-0 items-center justify-center bg-gray-900 bg-opacity-75 ">
+              <div className="2xl:w-[480px] absolute top-[10rem] left-[50rem] ">
+                <div className="bg-mainColor rounded-lg shadow-md p-6 sm:mx-1 sm:my-4 ">
                   <div className="flex justify-between">
                     <h2 className="text-xl font-bold mb-4">
                       Appointment Request
@@ -100,8 +100,8 @@ const NavBar = () => {
                             />
                           </div>
                         </div>
-                        {/* date */}
-                        <div className="flex items-center gap-4 ">
+                        {/* date time dpt. */}
+                        <div className="flex items-center gap-4 sm: flex-wrap">
                           <div className="flex flex-col">
                             <label className="capitalize " htmlFor="appDate">
                               select date
@@ -112,6 +112,7 @@ const NavBar = () => {
                               className="rounded-md py-2 text-mainColor"
                             />
                           </div>
+                          {/* time selection */}
                           <div className="flex flex-col">
                             <label className="capitalize " htmlFor="appTime">
                               select time
@@ -122,6 +123,7 @@ const NavBar = () => {
                               className="rounded-md py-2 text-mainColor"
                             />
                           </div>
+                          {/* dpt. selection */}
                           <div className="flex flex-col text-mainColor outline-none">
                             <label htmlFor="appTime">select time</label>
                             <select
@@ -135,6 +137,7 @@ const NavBar = () => {
                             </select>
                           </div>
                         </div>
+                        {/* message */}
                         <div className="my-4">
                           <label htmlFor="message">Message:</label>
                           <textarea
@@ -142,6 +145,7 @@ const NavBar = () => {
                             className="rounded-md  border-gray-300 p-2 w-full h-24"
                           />
                         </div>
+                        {/* btn */}
                         <div className="flex justify-end">
                           <button
                             type="submit"

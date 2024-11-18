@@ -47,7 +47,7 @@ const Home = () => {
                         alt="calender image"
                       />
                     </div>
-                    <div className="bg-secColor 2xl:w-[28rem] 2xl:h-[6.25rem] flex justify-evenly text-white items-center rounded-md font-workSans sm:w-[19rem] sm:h-[4rem]">
+                    <div className="bg-secColor 2xl:w-[28rem] 2xl:h-[6.25rem] flex justify-evenly text-white items-center rounded-md font-workSans sm:w-[19rem] sm:h-[4rem] sm:mb-3">
                       <h3>Book an appoinment</h3>
                       <img
                         className="h-[3rem] w-[3rem] "
