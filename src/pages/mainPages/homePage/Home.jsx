@@ -29,7 +29,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="">
-                <div className="absolute 2xl:bottom-[-4rem] md:bottom-[-3rem] sm:bottom-[-12rem] ">
+                <div className="absolute 2xl:bottom-[-10rem] md:bottom-[-3rem] sm:bottom-[-12rem] ">
                   <div className="2xl:flex 2xl:items-center md:flex md:flex-wrap md:justify-center md:items-center 2xl:gap-5 md:gap-2 sm:block  ">
                     <div className="bg-mainColor 2xl:w-[28rem] 2xl:h-[6.25rem] flex justify-evenly text-white items-center rounded-md font-workSans sm:w-[19rem] sm:h-[4rem] sm:mb-3">
                       <h3>Book an appoinment</h3>
@@ -157,7 +157,7 @@ const Home = () => {
           </div>
         </div>
         <div className="2xl:w-[35rem] 2xl:text-base sm:text-sm sm:pl-4">
-          <div>
+          <div className="md:w-[28rem] ">
             <h2 className="2xl:text-3xl sm:text-lg ">
               A passion for putting patients first.
             </h2>
@@ -181,7 +181,7 @@ const Home = () => {
                 augue. Velit nascetur proin massa in. Consequat faucibus
                 porttitor enim et.
               </p>
-              <p className="py-6">
+              <p className="py-6 sm:hidden md:hidden xl:block 2xl:block">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                 placerat scelerisque. Convallis felis vitae tortor augue. Velit
                 nascetur proin massa in.
@@ -189,10 +189,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="2xl:block sm:hidden">
-          <div>
-            <img
-              className="mb-4 w-[20rem] "
+        <div className="sm:hidden md:hidden xl:block 2xl:block">
+          <div className="md:w-[20rem] ">
+            <img 
+              className="mb-4 md:w-[20rem]  "
               src="./images/serviceImg-1.jpg"
               alt="service image 1"
             />
