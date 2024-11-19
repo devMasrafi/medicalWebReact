@@ -26,7 +26,7 @@ const NavBar = () => {
   return (
     <section className=" bg-mainColor py-2 sm:px-2 ">
       <div className="container mx-auto flex justify-between text-white  ">
-        <div className="2xl:block sm:hidden">
+        <div className="2xl:block md:block sm:hidden">
           <ul className="flex items-center capitalize gap-5 font-workSans text-lg font-semibold py-3">
             <li>
               <Link to="/">home</Link>
