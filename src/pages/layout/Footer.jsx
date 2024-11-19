@@ -51,7 +51,7 @@ const Footer = () => {
             </div>
           </div>
           {/* news letter */}
-          <div>
+           <div>
             <h3 className="text-lg font-semibold mb-2">Newsletter</h3>
             <div className="flex pt-2 pb-6">
               <input
@@ -63,11 +63,11 @@ const Footer = () => {
                 <img src="./images/sendMail.svg" alt="" />
               </button>
             </div>
-          </div>
+          </div> 
         </div>
 
         {/* copywright */}
-        <div className="mt-4 py-6">
+         <div className="mt-4 py-6">
           <p> &copy; 2021 Hospital's name. All Rights Reserved by PNTEC-LTD</p>
           <div className="flex space-x-4 mt-2">
             <a href="#" className="text-white hover:text-gray-300">

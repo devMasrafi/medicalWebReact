@@ -61,7 +61,7 @@ const NavBar = () => {
           </button>
           {modalOpen && (
             <div className="fixed inset-0 z-50 top-0 items-center justify-center bg-gray-900 bg-opacity-75 ">
-              <div className="2xl:w-[480px] absolute top-[10rem] left-[50rem] ">
+              <div className="2xl:w-[480px] 2xl:absolute 2xl:top-[10rem] 2xl:left-[45rem] ">
                 <div className="bg-mainColor rounded-lg shadow-md p-6 sm:mx-1 sm:my-4 ">
                   <div className="flex justify-between">
                     <h2 className="text-xl font-bold mb-4">
@@ -78,25 +78,25 @@ const NavBar = () => {
                     <div>
                       <form onSubmit={onSubmitHandler}>
                         {/* name and mail */}
-                        <div className="flex justify-between gap-2">
-                          <div className="mb-4">
+                        <div className="md:flex justify-between gap-2">
+                          <div className="mb-4 sm:flex sm:flex-col md:block">
                             <label className="capitalize " htmlFor="name">
                               Name:
                             </label>
                             <input
                               type="text"
                               id="name"
-                              className="text-mainColor rounded-md  border-gray-300 p-2 w-full"
+                              className="text-mainColor rounded-md  border-gray-300 p-2 2xl:w-full md:w-[18rem] "
                             />
                           </div>
-                          <div className="mb-4">
+                          <div className="mb-4 sm:flex sm:flex-col md:block">
                             <label className="capitalize " htmlFor="email">
                               Email:
                             </label>
                             <input
                               type="email"
                               id="email"
-                              className="text-mainColor rounded-md  border-gray-300 p-2 w-full"
+                              className="text-mainColor rounded-md  border-gray-300 p-2 2xl:w-full md:w-[18rem] "
                             />
                           </div>
                         </div>
@@ -138,6 +138,14 @@ const NavBar = () => {
                           </div>
                         </div>
                         {/* message */}
+                        <div className="my-4">
+                          <label htmlFor="message">phone:</label>
+                          <input
+                            name="phone"
+                            
+                            className="rounded-md  border-gray-300 p-2 w-full mt-1"
+                          />
+                        </div>
                         <div className="my-4">
                           <label htmlFor="message">Message:</label>
                           <textarea
