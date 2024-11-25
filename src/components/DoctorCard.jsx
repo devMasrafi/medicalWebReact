@@ -21,7 +21,7 @@ const DoctorCard = () => {
               transition={{ delay: 0.3 + index * 0.1, duration: 1 }}
               className="border rounded-md text-center sm:my-3 md:my-0"
             >
-              <img src={doctor.img} alt="Doctor" />
+              <img className="w-full" src={doctor.img} alt="Doctor" />
               <div className="py-4">
                 <h3 className="capitalize">{doctor.name}</h3>
                 <h2 className="uppercase font-medium text-secColor">{doctor.dept}</h2>
