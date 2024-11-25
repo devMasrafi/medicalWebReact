@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { motion } from "framer-motion";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const NavBar = () => {
@@ -179,42 +181,40 @@ const NavBar = () => {
             </button>
           </div>
           {/* mobile navigation */}
-          <div>
+          <motion.section
+            initial={{ opacity: 0, x: -100 }}
+            animate={{
+              opacity: toogleNavOpen ? 1 : 0,
+              x: toogleNavOpen ? 0 : -100,
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="sm:w-screen sm:h-screen absolute bg-mainColor/90 top-0 left-0 flex px-3 items-center z-50"
+          >
             {toogleNavOpen && (
-              <section className="sm:w-screen sm:h-screen ">
-                <div>
-                  <ul className="capitalize gap-5 font-workSans text-lg font-semibold py-3">
-                    <li>
-                      <Link onClick={onToogleNavClick} to="/">
-                        home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link onClick={onToogleNavClick} to="/about">
-                        about us
-                      </Link>
-                    </li>
-                    <li>
-                      <Link onClick={onToogleNavClick} to="/service">
-                        service
-                      </Link>
-                    </li>
-                    {/* <li>
-                      <Link to="/doctors">doctor</Link>
-                    </li>
-                    <li>
-                      <Link to="/news">news</Link>
-                    </li> */}
-                    <li>
-                      <Link onClick={onToogleNavClick} to="/contact">
-                        contact
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </section>
+              <ul className="capitalize gap-5 font-workSans text-3xl font-semibold ">
+                <li className="pb-5 underline underline-offset-[1rem] decoration-AscColor  ">
+                  <Link onClick={onToogleNavClick} to="/">
+                    home
+                  </Link>
+                </li>
+                <li className="pb-5 underline underline-offset-[1rem] decoration-AscColor  ">
+                  <Link onClick={onToogleNavClick} to="/about">
+                    about us
+                  </Link>
+                </li>
+                <li className="pb-5 underline underline-offset-[1rem] decoration-AscColor  ">
+                  <Link onClick={onToogleNavClick} to="/service">
+                    service
+                  </Link>
+                </li>
+                <li className="pb-5 underline underline-offset-[1rem] decoration-AscColor  ">
+                  <Link onClick={onToogleNavClick} to="/contact">
+                    contact
+                  </Link>
+                </li>
+              </ul>
             )}
-          </div>
+          </motion.section>
         </div>
       </div>
     </section>

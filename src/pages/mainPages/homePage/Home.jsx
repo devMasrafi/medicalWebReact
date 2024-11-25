@@ -154,6 +154,9 @@ const Home = () => {
             alt=""
           />
         </div>
+        <div className="sm:hidden md:block text-center w-[45rem] text-lg mx-auto ">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, voluptatem! Quis quos similique necessitatibus! Reprehenderit quidem adipisci dolore minus laudantium, pariatur explicabo. Dignissimos tempora ad tenetur, vero commodi unde neque?</p>
+        </div>
       </section>
 
       {/* Doctors Section */}
