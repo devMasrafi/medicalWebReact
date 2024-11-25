@@ -1,21 +1,37 @@
+import { motion, useInView } from "framer-motion";
 import React from "react";
 
 const DoctorCard = () => {
   return (
-    <div>
-      <div className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center">
-        <img
-          src={imageSrc}
-          alt={DoctorName}
-          className="w-24 h-24 rounded-full mb-4"
-        />
-        <h3 className="text-lg font-bold mb-2">{DoctorName}</h3>
-        <p className="text-gray-500 mb-2">{specialty}</p>
-        <a href={profileLink} className="text-blue-500 hover:underline">
-          View Profile
-        </a>
-      </div>
-    </div>
+    <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="md:flex justify-center md:gap-8 sm:block "
+        >
+          {[
+            { img: "./images/doctorimage-1.jpg", name: "Doctor Name", dept: "Neurology" },
+            { img: "./images/doctorimage-2.png", name: "Doctor Name", dept: "Neurology" },
+            { img: "./images/doctorimage-3.jpg", name: "Doctor Name", dept: "Neurology" },
+          ].map((doctor, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3 + index * 0.1, duration: 1 }}
+              className="border rounded-md text-center sm:my-3 md:my-0"
+            >
+              <img src={doctor.img} alt="Doctor" />
+              <div className="py-4">
+                <h3 className="capitalize">{doctor.name}</h3>
+                <h2 className="uppercase font-medium text-secColor">{doctor.dept}</h2>
+              </div>
+              <h4 className="bg-mainColor w-full py-2 text-white uppercase 2xl:text-base sm:text-xs cursor-pointer">
+                View Profile
+              </h4>
+            </motion.div>
+          ))}
+        </motion.div>
   );
 };
 

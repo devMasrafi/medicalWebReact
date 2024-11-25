@@ -1,203 +1,147 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
+import DoctorCard from "../../../components/DoctorCard";
+import ContactCards from "../../../components/ContactCards";
 
 const About = () => {
+  const ref = useRef()
+
   return (
     <main className="font-workSans">
-      {/* hero section */}
-      <section className="relative bg-aboutHeroImg bg-no-repeat bg-cover h-[350px] ">
+      {/* Hero Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative bg-aboutHeroImg bg-no-repeat bg-cover h-[350px]"
+      >
         <div className="absolute inset-0 bg-white/50">
-          <div className="container mx-auto pt-[12rem] sm:px-2 md:px-3 ">
-            <div className="font-workSans shadow-md ">
+          <div className="container mx-auto pt-[12rem] sm:px-2 md:px-3">
+            <div className="font-workSans shadow-md">
               <a href="/" className="hover:text-AscColor transition-colors">
                 Home
               </a>
               <span> / </span>
               <span>About Us</span>
             </div>
-            <h2 className="font-yesevaOne capitalize text-6xl text-mainColor ">
+            <motion.h2
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="font-yesevaOne capitalize text-6xl text-mainColor"
+            >
               About us
-            </h2>
+            </motion.h2>
           </div>
         </div>
-      </section>
-      {/* About welcome section */}
-      <section className="container mx-auto mt-[4rem]">
+      </motion.section>
+
+      {/* About Welcome Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="container mx-auto mt-[4rem]"
+      >
         <div className="sm:p-2 sm:text-sm 2xl:text-base">
-          <div className="flex justify-evenly ">
-            <div>
+          <div className="flex justify-evenly">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+            >
               <img
                 className="sm:hidden 2xl:block"
                 src="./images/aboutWelcomeImg.png"
                 alt="about welcome image"
               />
-            </div>
+            </motion.div>
             <div>
-              <div>
-                <h3 className="md:text-xl uppercase text-secColor font-workSans font-medium ">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+              >
+                <h3 className="md:text-xl uppercase text-secColor font-workSans font-medium">
                   Welcome to Hospital name
                 </h3>
-                <h2 className="font-yesevaOne md:text-3xl sm:text-xl sm:w-[12rem]  capitalize text-mainColor   ">
+                <h2 className="font-yesevaOne md:text-3xl sm:text-xl sm:w-[12rem] capitalize text-mainColor">
                   Best Care for Your Good Health
                 </h2>
-                <div className="2xl:flex py-5 gap-12 ">
+                <div className="2xl:flex py-5 gap-12">
                   <ul className="list-disc list-inside marker:text-blue-600">
                     <li>A Passion for Healing</li>
                     <li>All our best</li>
                     <li>A Legacy of Excellence</li>
                   </ul>
-                  <ul className="list-disc list-inside marker:text-blue-600 ">
+                  <ul className="list-disc list-inside marker:text-blue-600">
                     <li>5-Star Care</li>
                     <li>Believe in Us</li>
                     <li>Always Caring</li>
                   </ul>
                 </div>
-                <div className="py-8 md:w-[564px] ">
+                <div className="py-8 md:w-[564px]">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque placerat scelerisque tortor ornare ornare. Quisque
-                    placerat scelerisque tortor ornare ornare Convallis felis
-                    vitae tortor augue. Velit nascetur proin massa in. Consequat
-                    faucibus porttitor enim et.
+                    Quisque placerat scelerisque tortor ornare ornare. Convallis
+                    felis vitae tortor augue. Velit nascetur proin massa in.
                   </p>
                   <p className="py-6 sm:hidden md:block">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque placerat scelerisque. Convallis felis vitae tortor
-                    augue. Velit nascetur proin massa in.
+                    Convallis felis vitae tortor augue. Velit nascetur proin
+                    massa in.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* About us measages section */}
-      <section className="relative bg-aboutMessageBg bg-cover h-[440px] my-14 text-white ">
+      {/* About Us Messages Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative bg-aboutMessageBg bg-cover h-[440px] my-14 text-white"
+      >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-black/70">
           <div className="text-center flex flex-col items-center justify-center">
-            <div className="md:w-[554px] flex flex-col items-center mt-[5rem] ">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              className="md:w-[554px] flex flex-col items-center mt-[5rem]"
+            >
               <img
                 className="w-[4rem]"
                 src="./images/quotionVector.svg"
                 alt=""
               />
-              <p className="border-b-2 border-b-gray-400 pb-8 ">
+              <p className="border-b-2 border-b-gray-400 pb-8">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                placerat scelerisque tortor ornare ornare. Quisque placerat
-                scelerisque felis vitae tortor augue. Velit nascetur Consequat
-                faucibus porttitor enim et.
+                placerat scelerisque tortor ornare ornare. Convallis felis vitae
+                tortor augue. Velit nascetur.
               </p>
               <h3 className="capitalize text-xl font-semibold pt-4">
-                Jhon doe
+                John Doe
               </h3>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </section>
-      {/* doctors */}
-      <section className="font-workSans">
-        <div className="container mx-auto px-4 py-8">
-          <h2 className="text-3xl font-bold text-center mb-8">Our Doctors</h2>
-          <div className="md:flex justify-center gap-8">
-            <div className="border rounded-md my-2">
-              <div className="text-center">
-                <img src="./images/doctorimage-1.jpg" alt="" />
-                <div className="py-4">
-                  <h3 className="capitalize ">doctor name</h3>
-                  <h2 className="uppercase font-medium text-secColor  ">
-                    neurology
-                  </h2>
-                </div>
-                <h4 className="bg-mainColor w-full py-2 text-white uppercase">
-                  view profile
-                </h4>
-              </div>
-            </div>
-            <div className="border rounded-md my-2">
-              <div className="text-center">
-                <img src="./images/doctorimage-2.png" alt="" />
-                <div className="py-4">
-                  <h3 className="capitalize ">doctor name</h3>
-                  <h2 className="uppercase font-medium text-secColor  ">
-                    neurology
-                  </h2>
-                </div>
-                <h4 className="bg-mainColor w-full py-2 text-white uppercase">
-                  view profile
-                </h4>
-              </div>
-            </div>
-            <div className="border rounded-md my-2">
-              <div className="text-center">
-                <img src="./images/doctorimage-3.jpg" alt="" />
-                <div className="py-4">
-                  <h3 className="capitalize ">doctor name</h3>
-                  <h2 className="uppercase font-medium text-secColor  ">
-                    neurology
-                  </h2>
-                </div>
-                <h4 className="bg-mainColor w-full py-2 text-white uppercase">
-                  view profile
-                </h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </motion.section>
 
-      <section className="container mx-auto py-10">
-        <div>
-          <div className="text-center my-20 ">
-            <h3 className="md:text-lg sm:text-xs uppercase font-semibold text-secColor">
-              get in touch
-            </h3>
-            <h2 className="font-yesevaOne text-3xl pt-2">contact</h2>
-          </div>
-          <div className="md:flex justify-evenly items-center sm:flex sm:flex-wrap sm:gap-4">
-            <div className=" md:w-[230px] md:h-[230px] md:gap-2 bg-AscColor flex flex-col justify-center items-center rounded-md sm:w-[8rem] sm:h-[8rem] sm:text-sm sm:p-2 ">
-              <div>
-                <h3 className="md:text-lg sm:text-xs uppercase font-medium ">
-                  emergency
-                </h3>
-                <p>(237) 681-812-255</p>
-                <p>(237) 666-331-894</p>
-              </div>
-            </div>
-            <div className=" md:w-[230px] md:h-[230px] md:gap-2 bg-AscColor flex flex-col justify-center items-center rounded-md sm:w-[8rem] sm:h-[8rem] sm:text-sm sm:p-2 ">
-              <div>
-                <h3 className="md:text-lg sm:text-xs uppercase font-medium ">
-                  Location
-                </h3>
-                <p>0123 Some place</p>
-                <p>9876 Some country</p>
-              </div>
-            </div>
-            <div className=" md:w-[230px] md:h-[230px] md:gap-2 bg-AscColor flex flex-col justify-center items-center rounded-md sm:w-[8rem] sm:h-[8rem] sm:text-sm sm:p-2 ">
-              <div>
-                <h3 className="md:text-lg sm:text-xs uppercase font-medium ">
-                  Email
-                </h3>
-                <p className="sm:block md:hidden">
-                  fildinee
-                  <br />
-                  esoe@gmil.com
-                </p>
-                <p className="sm:hidden md:block">fildineeesoe@gmil.com</p>
-                <p className="sm:hidden md:block">myebstudios@gmail.com</p>
-              </div>
-            </div>
-            <div className=" md:w-[230px] md:h-[230px] md:gap-2 bg-AscColor flex flex-col justify-center items-center rounded-md sm:w-[8rem] sm:h-[8rem] sm:text-sm sm:p-2 ">
-              <div>
-                <h3 className="md:text-lg uppercase font-medium ">
-                  Working Hours
-                </h3>
-                <p>Mon-Sat 09:00-20:00</p>
-                <p>Sunday Emergency only</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Doctors Section */}
+      <div className="py-[5rem] px-2 ">
+        <DoctorCard />
+      </div>
+      <motion.div 
+        initial={{opacity: 0}}
+        animate={{ opacity: 1 ,x: 0.5 }}
+        transition={{ duration: 0.3, delay: 1, ease: "linear" }}
+      className="container mx-auto my-[3rem] px-2 ">
+        <ContactCards className="md:w-[230px] md:h-[230px] bg-mainColor text-white flex justify-between rounded-md sm:w-full sm:h-[6rem] items-center" />
+      </motion.div>
     </main>
   );
 };
